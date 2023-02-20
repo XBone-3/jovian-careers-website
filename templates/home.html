@@ -16,9 +16,10 @@
   </head>
 </head>
 <body>
+  {% include "nav.html" %}
   <img id="banner" src="/static/cover-art.jpg">
   <div class="container">
-    <h1 class="text-center">Jovian Careers</h1>
+    <h1 class="text-center">{{title}} Careers</h1>
     <div>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius tristique nisl, quis ullamcorper lectus congue vel. Phasellus aliquam aliquet lectus, sit amet ornare elit porttitor id. Sed pharetra tincidunt condimentum. Vivamus posuere iaculis nibh, quis aliquet mi facilisis molestie. Vivamus consectetur condimentum quam, quis egestas libero ullamcorper at. Quisque scelerisque mauris magna, non aliquet mauris dictum nec. Quisque in sodales magna. Fusce non aliquet enim. Donec est lorem, molestie sit amet tristique in, lacinia nec odio.</p>
 <p>
@@ -29,5 +30,10 @@ Nullam vulputate, massa vel viverra scelerisque, ipsum libero semper felis, a vi
 Duis ut enim leo. Curabitur ac hendrerit ante. Nullam consectetur pretium erat id scelerisque. Curabitur ullamcorper congue faucibus. Maecenas posuere in lacus ut malesuada. Morbi enim magna, commodo vitae efficitur sed, scelerisque at orci. Donec molestie tellus eu volutpat scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse faucibus molestie erat vel interdum. Cras feugiat lobortis varius.</p>
     </div>
   </div>
+  <div class="container">
+    <p>TODO - do something later</p>
+  </div>
+  <a type="button" class="btn btn-primary btn-lg" href="">Contact me</a>
+  {% include "footer.html" %}
 </body>
 </html>
