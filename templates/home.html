@@ -11,6 +11,7 @@
       max-height: 360px;
       width: 100%;
       object-fit: cover;
+      margin-bottom: 16px;
     }
   </style>
   </head>
@@ -20,20 +21,23 @@
   <img id="banner" src="/static/cover-art.jpg">
   <div class="container">
     <h1 class="text-center">{{title}} Careers</h1>
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius tristique nisl, quis ullamcorper lectus congue vel. Phasellus aliquam aliquet lectus, sit amet ornare elit porttitor id. Sed pharetra tincidunt condimentum. Vivamus posuere iaculis nibh, quis aliquet mi facilisis molestie. Vivamus consectetur condimentum quam, quis egestas libero ullamcorper at. Quisque scelerisque mauris magna, non aliquet mauris dictum nec. Quisque in sodales magna. Fusce non aliquet enim. Donec est lorem, molestie sit amet tristique in, lacinia nec odio.</p>
-<p>
-Etiam pellentesque lectus at neque lobortis, eget euismod massa congue. Vivamus nisi orci, suscipit pharetra urna non, vestibulum volutpat lacus. Maecenas facilisis felis ac libero lacinia dignissim. Aenean vitae elit nec ante ultrices sollicitudin. In a metus nec eros accumsan pretium. Quisque mattis velit vitae arcu interdum, sed malesuada odio congue. Nullam fermentum augue sit amet auctor hendrerit. Morbi at luctus purus, nec blandit orci. Duis volutpat urna a libero lacinia, in venenatis mi aliquam. In hac habitasse platea dictumst. Donec nec vehicula mi. Fusce tempus lobortis pretium. Nunc eget lobortis risus, eu imperdiet quam. Mauris et consectetur risus, at condimentum est.</p>
-<p>
-Nullam vulputate, massa vel viverra scelerisque, ipsum libero semper felis, a viverra justo leo sit amet est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras maximus lorem auctor metus mattis, ac tempus nunc maximus. Vivamus bibendum nisl hendrerit volutpat pellentesque. Duis in porta arcu. Maecenas sit amet leo velit. Duis ex ex, tincidunt at ornare id, sodales a nisi. Duis ultrices fringilla tortor in ultrices. Sed massa mi, commodo in eros vitae, facilisis consequat sapien. Aliquam vitae placerat tellus. Sed vitae faucibus nisl. Proin scelerisque orci ut urna accumsan blandit. Fusce a volutpat enim.</p>
-<p>
-Duis ut enim leo. Curabitur ac hendrerit ante. Nullam consectetur pretium erat id scelerisque. Curabitur ullamcorper congue faucibus. Maecenas posuere in lacus ut malesuada. Morbi enim magna, commodo vitae efficitur sed, scelerisque at orci. Donec molestie tellus eu volutpat scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse faucibus molestie erat vel interdum. Cras feugiat lobortis varius.</p>
+    <div class="row">
+      <div class="col-md-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius tristique nisl, quis ullamcorper lectus congue vel. Phasellus aliquam aliquet lectus, sit amet ornare elit porttitor id. Sed pharetra tincidunt condimentum. Vivamus posuere iaculis nibh, quis aliquet mi facilisis molestie. Vivamus consectetur condimentum quam, quis egestas libero ullamcorper at. Quisque scelerisque mauris magna, non aliquet mauris dictum nec. Quisque in sodales magna. Fusce non aliquet enim. Donec est lorem, molestie sit amet tristique in, lacinia nec odio.</p>
+          <p>Etiam pellentesque lectus at neque lobortis, eget euismod massa congue. Vivamus nisi orci, suscipit pharetra urna non, vestibulum volutpat lacus. Maecenas facilisis felis ac libero lacinia dignissim. Aenean vitae elit nec ante ultrices sollicitudin. In a metus nec eros accumsan pretium. Quisque mattis velit vitae arcu interdum, sed malesuada odio congue. Nullam fermentum augue sit amet auctor hendrerit. Morbi at luctus purus, nec blandit orci. Duis volutpat urna a libero lacinia, in venenatis mi aliquam. In hac habitasse platea dictumst. Donec nec vehicula mi. Fusce tempus lobortis pretium. Nunc eget lobortis risus, eu imperdiet quam. Mauris et consectetur risus, at condimentum est.          </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img src="/static/work.jpg" id="banner">
+      </div>
     </div>
   </div>
   <div class="container">
-    <p>TODO - do something later</p>
+    <h2 class="text-center border-bottom pb-2">Job Openings at {{title}}</h2>
+    {% for job in jobs %}
+      {% include "jobs.html" %}
+    {% endfor %}
   </div>
-  <a type="button" class="btn btn-primary btn-lg" href="">Contact me</a>
+  
   {% include "footer.html" %}
 </body>
 </html>

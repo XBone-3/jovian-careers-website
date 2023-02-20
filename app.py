@@ -30,9 +30,8 @@ JOBS = [
   {
     "id" : 5,
     "title" : "Data Research Engineer",
-    "location": "Remote",
-    "salary": "$160,000"
-  },
+    "location": "Remote"
+  }
 ]
 
 @app.route("/")
